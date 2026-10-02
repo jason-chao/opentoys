@@ -149,12 +149,17 @@
 		grid-column: 1 / -1;
 	}
 	.mini canvas {
-		height: 0.6rem;
-		border-radius: 0.3rem;
+		height: 2rem;
+		border-radius: 0.4rem;
+	}
+	@media (max-width: 479px) and (max-height: 800px) {
+		.mini canvas {
+			height: 1.6rem;
+		}
 	}
 	@media (min-width: 480px) {
 		.mini canvas {
-			height: 1.1rem;
+			height: 2.6rem;
 		}
 	}
 	canvas {

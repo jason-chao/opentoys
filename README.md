@@ -1,6 +1,8 @@
 # opentoys
 
-**Control your intimate devices from the browser: DG-LAB Coyote 3.0 and Bananasome Dragon S1. See every pattern's waveform before you play it.**
+**Control intimate toys over Bluetooth in your browser. Made for the [DG-LAB Coyote 3.0](https://www.dungeon-lab.com/products/COYOTE-030): see every pattern's waveform before you play it, set your own limits, and keep your data in your browser.**
+
+Also works with the [Bananasome Dragon S1](https://bananasome.com/pages/dragon-s1) ring, alone or alongside the DG-LAB Coyote 3.0.
 
 [English](README.md) · [繁體中文](README.zh-Hant.md) · [简体中文](README.zh-Hans.md)
 
@@ -10,15 +12,16 @@
 
 No device at hand? Confirm that you are 18 or over, then tap **Look around without a device** on the first screen. Patterns play on screen, so you can see how it works before you connect anything.
 
-![opentoys controlling two devices: the Control screen, the pattern list, a pattern's waveform and a channel's options](docs/screenshots/overview-en.png)
+![opentoys: the Control screen, the pattern list, a pattern's waveform and a channel's options](docs/screenshots/overview-en.png)
 
 ## What you get
 
-- **Two devices, one screen.** Use either device alone or both together. **Stop** ends playback on both. If a device keeps going, switch it off at the device.
+- **Both channels on one screen.** A and B each have their own pattern, intensity and live trace, and **Stop** stops playback for all devices. If a device keeps going, switch it off at the device.
 - **Patterns you can see first.** Every pattern shows its waveform before you start it. Adjustable patterns redraw as you change them.
 - **Your own limits.** You set each output's maximum by feeling it, and the app keeps what it sends within that maximum.
 - **Stored in your browser.** Your usage history and settings stay in your browser, where you can export or delete them. There is no sign-up and no tracking.
 - **Works offline.** After the first visit the app is cached, so it opens without a connection. You can also add it to your home screen.
+- **More than one device.** Add a Bananasome Dragon S1 and run it next to the DG-LAB Coyote 3.0.
 - **Three languages:** English, 繁體中文 and 简体中文.
 - **Four colour modes,** dark and light.
 
@@ -29,9 +32,9 @@ No device at hand? Confirm that you are 18 or over, then tap **Look around witho
 | **DG-LAB Coyote 3.0** | An e-stim unit with two channels, used with electrode pads | [dungeon-lab.com](https://www.dungeon-lab.com/products/COYOTE-030) |
 | **Bananasome Dragon S1** | A ring with vibration and e-stim | [bananasome.com](https://bananasome.com/pages/dragon-s1) |
 
-Both were tested on real hardware with Chrome on Android. Details are in [docs/DEVICES.md](docs/DEVICES.md).
-
 DG-LAB publishes the Bluetooth protocol of the DG-LAB Coyote 3.0 in its own [repository on GitHub](https://github.com/dungeonlab-open/dglab-bluetooth-protocol), and opentoys implements it.
+
+Both devices were tested on real hardware with Chrome on Android. Details are in [docs/DEVICES.md](docs/DEVICES.md).
 
 > opentoys is an independent, non-commercial project, unaffiliated with any device maker. No device maker endorses or sponsors it. Product names and brands belong to their owners and only identify compatible hardware.
 

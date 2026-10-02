@@ -144,7 +144,17 @@
 		width: 100%;
 		/* Small on a short phone, so that every row of both devices is on screen above Stop, and larger where
 		   the screen has room for it. */
-		height: clamp(4rem, calc(75svh - 30rem), 13rem);
+		height: clamp(4rem, calc(75svh - 34rem), 13rem);
+	}
+	/* A short phone with two devices: their four rows take the screen, and the orb, which would be a dot by
+	   then, gives way to them. It is back as soon as the screen is taller or there is one device. */
+	@media (max-width: 479px) and (max-height: 800px) {
+		.cards {
+			gap: 0.2rem;
+		}
+		.control:has(.cards.two) .stage {
+			display: none;
+		}
 	}
 	.caption {
 		margin: 0 0 0.25rem;
@@ -169,7 +179,7 @@
 	}
 	.cards {
 		display: grid;
-		gap: 0.4rem;
+		gap: 0.3rem;
 		align-items: start;
 	}
 	.time {

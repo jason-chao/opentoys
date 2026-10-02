@@ -356,7 +356,8 @@ textarea {
 .page {
 	max-width: 46rem;
 	margin: 0 auto;
-	padding: 1rem 1rem calc(var(--tabbar-h) + 6rem);
+	/* Room under the last line for the Now playing bar, which is four lines tall with two devices. */
+	padding: 1rem 1rem calc(var(--tabbar-h) + 9.5rem);
 }
 .page > h1 {
 	margin: 0.5rem 0 0.25rem;

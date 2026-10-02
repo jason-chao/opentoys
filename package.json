@@ -1,7 +1,7 @@
 {
 	"name": "opentoys",
 	"private": true,
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"type": "module",
 	"description": "Privacy-first, browser-only controller for intimate devices",
 	"license": "PolyForm-Noncommercial-1.0.0",

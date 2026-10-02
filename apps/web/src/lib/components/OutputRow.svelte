@@ -1,6 +1,7 @@
 <script lang="ts">
 	// One output on Control, the same for every device: its name, what it is playing (or what it needs), the
-	// value with − and + (press and hold repeats), a small trace of the last seconds, and "More".
+	// value with − and + (press and hold repeats), "More", and under them a trace of the last seconds across the
+	// row's full width, tall enough to show a change in level.
 	import { m } from '$lib/paraglide/messages';
 	import { hold } from '$lib/app/hold';
 	import type { Trace } from '$lib/app/trace';
@@ -56,9 +57,6 @@
 			<span class="name">{name}</span>
 			<span class="status">{status}</span>
 		</p>
-		<div class="mini">
-			{#if trace}<LiveGraph {trace} {tone} {lane} mini />{/if}
-		</div>
 	</div>
 	{#if action}
 		<button type="button" class="btn small action" onclick={action.run}>{action.label}</button>
@@ -81,16 +79,23 @@
 			{m.row_more()}
 		</button>
 	{/if}
+	{#if trace}
+		<div class="mini">
+			<LiveGraph {trace} {tone} {lane} mini />
+		</div>
+	{/if}
 </div>
 
 <style>
-	/* One line per output, 44 px controls: name and what it plays over a slim trace, then − value +, then More. */
+	/* One line per output, 44 px controls: name and what it plays, then − value +, then More; the trace under
+	   them, the row's full width. */
 	.row {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
-		gap: 0.4rem;
+		gap: 0.15rem 0.4rem;
 		min-height: 46px;
-		padding: 0.1rem 0;
+		padding: 0.1rem 0 0.2rem;
 		border-top: 1px solid var(--line);
 	}
 	.what {
@@ -131,7 +136,8 @@
 		color: var(--soft);
 	}
 	.mini {
-		height: 0.6rem;
+		flex: 1 0 100%;
+		height: 2rem;
 	}
 	.more {
 		flex: none;
@@ -190,12 +196,23 @@
 		flex: none;
 		padding: 0 0.8rem;
 	}
+	/* A short phone: four rows (two devices) must still end above Stop, so the trace is lower there. */
+	@media (max-width: 479px) and (max-height: 800px) {
+		.row {
+			gap: 0 0.4rem;
+			min-height: 44px;
+			padding: 0.05rem 0;
+		}
+		.mini {
+			height: 1.6rem;
+		}
+	}
 	@media (min-width: 480px) {
 		.row {
 			gap: 0.6rem;
 		}
 		.mini {
-			height: 1.1rem;
+			height: 2.6rem;
 		}
 		.val {
 			font-size: 1.5rem;

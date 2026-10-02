@@ -1,9 +1,10 @@
 <script lang="ts">
 	// About: what opentoys is, the legal notice, privacy in one line, the safety notes (what every device
-	// shares once, with the own-risk line, then each of the user's devices' own), and the version.
+	// shares once, with the own-risk line, then each of the user's devices' own), the version and the source.
 	import { m } from '$lib/paraglide/messages';
 	import { useApp } from '$lib/app/app.svelte';
 	import { screensOf } from '$lib/devices/screens';
+	import Icon from '$lib/components/Icon.svelte';
 	import SharedSafety from '$lib/components/SharedSafety.svelte';
 	import pkg from '../../../package.json';
 	import '$lib/styles/settings.css';
@@ -41,6 +42,10 @@
 	</section>
 
 	<p class="version faint">{m.about_version({ version: pkg.version })}</p>
+	<!-- The app's one outward link. A plain link the user taps, with no referrer: the page fetches nothing. -->
+	<a class="source" href="https://github.com/jason-chao/opentoys" rel="noopener noreferrer" target="_blank">
+		<Icon name="github" size={20} />{m.about_source()}
+	</a>
 </div>
 
 <style>
@@ -56,5 +61,14 @@
 	.version {
 		margin: var(--space-section) 0 0;
 		font-size: 0.85rem;
+	}
+	.source {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.45rem;
+		min-height: 44px;
+		margin-top: 0.2rem;
+		font-size: 0.9rem;
+		font-weight: 650;
 	}
 </style>

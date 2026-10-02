@@ -77,7 +77,7 @@ export default defineConfig({
 				name: 'opentoys',
 				short_name: 'opentoys',
 				description:
-					'Control your device from the browser over Bluetooth. Your usage history and settings stay in this browser.',
+					'Control intimate toys over Bluetooth in your browser. Your usage history and settings stay in this browser.',
 				start_url: '/',
 				scope: '/',
 				display: 'standalone',

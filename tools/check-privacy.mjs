@@ -38,7 +38,14 @@ const ALLOWED = [
 		'apps/web/build/_app/',
 		'http://fallback.com',
 		"Paraglide's origin outside a browser (prerender); never fetched"
-	]
+	],
+	// The one outward link: About's "Source code on GitHub". A link the user taps (no referrer); the page never
+	// fetches it. Exact URL, in the About page and the build only.
+	...['apps/web/src/routes/about/', 'apps/web/build/'].map((path) => [
+		path,
+		'https://github.com/jason-chao/opentoys',
+		'the link to the source code on About; never fetched'
+	])
 ];
 
 const SCAN = [

@@ -1,6 +1,8 @@
 # opentoys
 
-**用浏览器控制你的情趣设备：DG-LAB 郊狼 3.0 和蕉帅 驭龙 S1（Bananasome Dragon S1）。每个模式都能先看波形，再开始播放。**
+**在浏览器中通过蓝牙控制情趣玩具。专为 [DG-LAB 郊狼 3.0](https://www.dungeon-lab.com/products/COYOTE-030)（DG-LAB Coyote 3.0）打造：每个模式都能先看波形再播放，上限自己定，数据只保存在你的浏览器里。**
+
+也支持 [蕉帅 驭龙 S1](https://bananasome.com/pages/dragon-s1)（Bananasome Dragon S1）环形玩具，可以单独用，也可以和 DG-LAB 郊狼 3.0 一起用。
 
 [English](README.md) · [繁體中文](README.zh-Hant.md) · [简体中文](README.zh-Hans.md)
 
@@ -10,15 +12,16 @@
 
 没有设备也能先体验。在第一个页面确认已年满 18 岁，再点“不连接设备，先看看”，模式就会在屏幕上播放，不用连接设备也能先了解怎么用。
 
-![opentoys 同时控制两台设备：控制页面、模式列表、模式波形和通道选项](docs/screenshots/overview-zh-Hans.png)
+![opentoys：控制页面、模式列表、模式波形和通道选项](docs/screenshots/overview-zh-Hans.png)
 
 ## 功能
 
-- **两台设备，同屏控制。** 可以只用一台，也可以两台一起用。“停止”会结束两台设备的播放。如果设备仍有输出，请直接关闭设备电源。
+- **两个通道，同屏控制。** A、B 通道各有自己的模式、强度和实时曲线，点击“停止”可停止所有设备的播放。如果设备仍有输出，请直接关闭设备电源。
 - **先看波形，再开始。** 每个模式开始前都能看到波形。可调节的模式会随你的设置实时重绘。
 - **上限自己定。** 根据实际感受设置各项输出的上限，opentoys 发送的强度不会超过这些上限。
 - **数据保存在浏览器里。** 使用记录和设置只保存在你的浏览器中，随时可以导出或删除。无需注册，也不跟踪你的使用情况。
 - **支持离线使用。** 第一次打开后，浏览器会缓存网站内容，之后离线也能使用。也可以把它添加到主屏幕。
+- **还能再加一台设备。** 加上蕉帅 驭龙 S1（Bananasome Dragon S1），和 DG-LAB 郊狼 3.0 一起用。
 - **三种语言：** English、繁體中文和简体中文。
 - **四种配色**，深色浅色都有。
 
@@ -29,9 +32,9 @@
 | **DG-LAB 郊狼 3.0**（DG-LAB Coyote 3.0） | 双通道电击设备，配合电极片使用 | [dungeon-lab.com](https://www.dungeon-lab.com/products/COYOTE-030) |
 | **蕉帅 驭龙 S1**（Bananasome Dragon S1） | 带振动和电击功能的环形情趣玩具 | [bananasome.com](https://bananasome.com/pages/dragon-s1) |
 
-两台设备都已在安卓版 Chrome 上做过真机测试，详见 [docs/DEVICES.md](docs/DEVICES.md)。
-
 DG-LAB 在 GitHub 的[公开仓库](https://github.com/dungeonlab-open/dglab-bluetooth-protocol)里发布了 DG-LAB 郊狼 3.0 的蓝牙协议，opentoys 按这份协议实现。
+
+两台设备都已在安卓版 Chrome 上做过真机测试，详见 [docs/DEVICES.md](docs/DEVICES.md)。
 
 > opentoys 是独立的非商业项目，与设备制造商无关联，也未获其认可或赞助。产品名称和品牌归各自所有者所有，仅用于标明兼容设备。
 

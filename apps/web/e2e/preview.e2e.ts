@@ -425,7 +425,11 @@ test('Settings is a short hub with a page per device, and About has the safety n
 			'Never place pads on the chest, head or neck, or across the chest (for example, one on each arm).'
 		)
 	).toHaveCount(1);
-	await expect(page.getByText(/^Version \d/)).toBeVisible();
+	await expect(page.getByText(/^Version 1\.\d+\.\d+$/)).toBeVisible();
+	// The one outward link, to the source: a plain link that sends no referrer.
+	const source = page.getByRole('link', { name: 'Source code on GitHub' });
+	await expect(source).toHaveAttribute('href', 'https://github.com/jason-chao/opentoys');
+	await expect(source).toHaveAttribute('rel', 'noopener noreferrer');
 	// My devices: one device can be taken out, never the last one.
 	await tab(page, 3);
 	await page.getByRole('link', { name: /My devices/ }).click();

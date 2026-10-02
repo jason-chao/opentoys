@@ -1,7 +1,7 @@
 {
 	"name": "@opentoys/web",
 	"private": true,
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"type": "module",
 	"description": "The opentoys web app (static SvelteKit PWA)",
 	"license": "PolyForm-Noncommercial-1.0.0",

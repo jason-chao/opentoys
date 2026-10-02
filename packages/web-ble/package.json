@@ -1,7 +1,7 @@
 {
 	"name": "@opentoys/web-ble",
 	"private": true,
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"type": "module",
 	"description": "Web Bluetooth transport",
 	"license": "PolyForm-Noncommercial-1.0.0",
