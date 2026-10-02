@@ -1,0 +1,27 @@
+opentoys
+Copyright (c) 2026 opentoys contributors
+Licensed under the PolyForm Noncommercial License 1.0.0 (see LICENSE).
+Non-commercial use is permitted subject to the licence terms.
+
+
+DG-LAB Coyote 3.0 support
+
+opentoys implements the Bluetooth protocol for the DG-LAB Coyote 3.0 published at
+https://github.com/dungeonlab-open/dglab-bluetooth-protocol. DG-LAB asks that its published protocol content not
+be used for any commercial purpose without its authorisation, and invites anyone interested in commercial
+cooperation to contact it. The opentoys licence does not grant permission to use DG-LAB's content.
+
+
+Others' use of this code
+
+This notice is for information only. It does not change or add conditions to the licence. Anyone who uses,
+modifies or redistributes this code is responsible for complying with applicable law and for obtaining any legally
+required permissions. The opentoys contributors do not endorse, or assume responsibility for, others' uses of this
+code, including anything built on it.
+
+
+Trademarks
+
+Trademarks mentioned in this project belong to their respective owners and are used to identify compatible
+hardware. This notice grants no trademark rights. Mentioning a device maker does not imply that it endorses or is
+affiliated with opentoys.

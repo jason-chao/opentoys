@@ -1,0 +1,176 @@
+{
+	"_note": "Vibration-only presets (our own designs). Levels are fractions of the calibrated felt range; 0 = off. Full-depth on/off stays >= 100 ms each (the motor needs ~40 ms to spin up and to stop); faster changes are shallow texture.",
+	"presets": [
+		{
+			"id": "steady",
+			"label": "Steady",
+			"category": "vibration",
+			"description": "One constant level. Set it with Intensity.",
+			"tags": ["constant"],
+			"vib": [["hold", 1.0, 1000]]
+		},
+		{
+			"id": "slow-pulse",
+			"label": "Slow pulse",
+			"category": "vibration",
+			"description": "One second on, one second off.",
+			"tags": ["pulse", "0.5 Hz"],
+			"vib": [["pulse", 1.0, 1000, 1000, 1]]
+		},
+		{
+			"id": "quick-pulse",
+			"label": "Quick pulse",
+			"category": "vibration",
+			"description": "Crisp on/off at 2.5 per second.",
+			"tags": ["pulse", "2.5 Hz"],
+			"vib": [["pulse", 1.0, 200, 200, 1]]
+		},
+		{
+			"id": "knock",
+			"label": "Knock",
+			"category": "vibration",
+			"description": "A firm knock followed by three lighter ones, like knocking on a door.",
+			"tags": ["pulse", "accent"],
+			"vib": [
+				["hold", 1.0, 150],
+				["rest", 350],
+				[
+					"repeat",
+					3,
+					[
+						["hold", 0.6, 150],
+						["rest", 350]
+					]
+				],
+				["rest", 500]
+			]
+		},
+		{
+			"id": "heartbeat",
+			"label": "Heartbeat",
+			"category": "vibration",
+			"description": "A lub-dub double beat at about 70 per minute.",
+			"tags": ["rhythm", "70 bpm"],
+			"vib": [
+				["hold", 1.0, 150],
+				["rest", 100],
+				["hold", 0.7, 100],
+				["rest", 500]
+			]
+		},
+		{
+			"id": "breath",
+			"label": "Breath",
+			"category": "vibration",
+			"description": "Slow breathing: rises for 4 s, eases off for 6 s (about 6 breaths a minute).",
+			"tags": ["wave", "10 s"],
+			"vib": [["sine", 0.15, 1.0, 10000, 1, 0.4]]
+		},
+		{
+			"id": "tide",
+			"label": "Tide",
+			"category": "vibration",
+			"description": "A surge, a small ebb, a second surge, then the water draws back.",
+			"tags": ["wave", "11 s"],
+			"vib": [
+				["ramp", 0.2, 1.0, 3000, "ease"],
+				["ramp", 1.0, 0.6, 1000, "ease"],
+				["ramp", 0.6, 1.0, 2000, "ease"],
+				["ramp", 1.0, 0.2, 3000, "ease"],
+				["rest", 2000]
+			]
+		},
+		{
+			"id": "wave",
+			"label": "Wave",
+			"category": "vibration",
+			"description": "A smooth swell between gentle and full every 4 s.",
+			"tags": ["wave", "4 s"],
+			"vib": [["sine", 0.3, 1.0, 4000, 1]]
+		},
+		{
+			"id": "stroke",
+			"label": "Stroke",
+			"category": "vibration",
+			"description": "Rhythmic strokes at about 1.4 per second.",
+			"tags": ["rhythm", "1.4 Hz"],
+			"vib": [["sine", 0.2, 1.0, 700, 1]]
+		},
+		{
+			"id": "climb",
+			"label": "Climb",
+			"category": "vibration",
+			"description": "Rises steadily for 6 s, stops, and climbs again.",
+			"tags": ["ramp", "6 s"],
+			"vib": [
+				["ramp", 0.15, 1.0, 6000],
+				["rest", 500]
+			]
+		},
+		{
+			"id": "waterfall",
+			"label": "Waterfall",
+			"category": "vibration",
+			"description": "Up for 4 s, down for 4 s.",
+			"tags": ["ramp", "8 s"],
+			"vib": [
+				["ramp", 0.15, 1.0, 4000],
+				["ramp", 1.0, 0.15, 4000]
+			]
+		},
+		{
+			"id": "staircase",
+			"label": "Staircase",
+			"category": "vibration",
+			"description": "Six steps up, each a quarter stronger than the last, 8 s each; a short rest, then again.",
+			"tags": ["steps", "50 s"],
+			"vib": [
+				["steps", 0.33, 1.25, 8000, 6, 300],
+				["rest", 2000]
+			]
+		},
+		{
+			"id": "build",
+			"label": "Build",
+			"category": "vibration",
+			"description": "Ninety seconds that get stronger and faster (0.5 to 3 pulses a second), a peak, then 20 s of rest.",
+			"tags": ["escalation", "2 min"],
+			"vib": [
+				["pulse", 0.5, 1000, 1000, 10, 0.25],
+				["pulse", 0.65, 500, 500, 20, 0.35],
+				["pulse", 0.8, 250, 250, 40, 0.45],
+				["pulse", 0.95, 150, 200, 57, 0.55],
+				["hold", 1.0, 10000],
+				["rest", 20000]
+			]
+		},
+		{
+			"id": "tease",
+			"label": "Tease",
+			"category": "vibration",
+			"description": "Builds for 20 s, hovers near the top for 10 s, then stops for 15 s.",
+			"tags": ["edging", "45 s"],
+			"vib": [
+				["ramp", 0.2, 0.85, 20000, "ease"],
+				["sine", 0.8, 1.0, 2000, 5],
+				["rest", 15000]
+			]
+		},
+		{
+			"id": "rhythm",
+			"label": "Rhythm",
+			"category": "vibration",
+			"description": "A swung five-in-eight beat at about 110 per minute, first beat accented.",
+			"tags": ["rhythm", "euclidean"],
+			"vib": [["euclid", 5, 8, 275, 150, 1.0, 0.7, 0.15]]
+		},
+		{
+			"id": "flutter",
+			"label": "Flutter",
+			"category": "vibration",
+			"description": "A fast shallow shimmer near full strength.",
+			"tags": ["texture", "5 Hz"],
+			"vib": [["pulse", 1.0, 100, 100, 1, 0.7]]
+		}
+	]
+}

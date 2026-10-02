@@ -1,0 +1,14 @@
+{
+	"name": "@opentoys/core",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"description": "Engine, safety pipeline, presets, generators, seeded RNG and modes format",
+	"license": "PolyForm-Noncommercial-1.0.0",
+	"exports": {
+		".": "./src/index.ts"
+	},
+	"scripts": {
+		"check": "tsc --noEmit && tsc --noEmit -p tsconfig.test.json"
+	}
+}

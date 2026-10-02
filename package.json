@@ -1,0 +1,42 @@
+{
+	"name": "opentoys",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"description": "Privacy-first, browser-only controller for intimate devices",
+	"license": "PolyForm-Noncommercial-1.0.0",
+	"engines": {
+		"node": "^20.19 || >=22.12"
+	},
+	"workspaces": [
+		"packages/*",
+		"apps/*"
+	],
+	"scripts": {
+		"dev": "npm run dev -w @opentoys/web",
+		"build": "npm run build -w @opentoys/web",
+		"preview": "npm run preview -w @opentoys/web",
+		"check": "npm run check:i18n && npm run check --workspaces --if-present",
+		"check:i18n": "node tools/check-messages.mjs",
+		"check:privacy": "node tools/check-privacy.mjs",
+		"lint": "prettier --check . && eslint .",
+		"format": "prettier --write .",
+		"test": "vitest --run && npm run test -w @opentoys/web",
+		"test:watch": "vitest",
+		"test:e2e": "npm run test:e2e -w @opentoys/web",
+		"verify": "npm run lint && npm run check && npm run test && npm run build && npm run check:privacy && npm run test:e2e"
+	},
+	"devDependencies": {
+		"@eslint/js": "^10.0.1",
+		"@types/node": "^22.20.4",
+		"eslint": "^10.11.0",
+		"eslint-config-prettier": "^10.1.8",
+		"eslint-plugin-svelte": "^3.23.0",
+		"globals": "^17.12.0",
+		"prettier": "^3.9.9",
+		"prettier-plugin-svelte": "^4.1.1",
+		"typescript": "^6.0.3",
+		"typescript-eslint": "^8.71.0",
+		"vitest": "^4.1.11"
+	}
+}

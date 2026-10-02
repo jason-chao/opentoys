@@ -1,0 +1,14 @@
+{
+	"name": "@opentoys/devices",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"description": "Device and transport interfaces, the Dragon S1 driver and a fake device",
+	"license": "PolyForm-Noncommercial-1.0.0",
+	"exports": {
+		".": "./src/index.ts"
+	},
+	"scripts": {
+		"check": "tsc --noEmit"
+	}
+}

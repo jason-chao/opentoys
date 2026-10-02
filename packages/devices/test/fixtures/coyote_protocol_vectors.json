@@ -1,0 +1,1337 @@
+{
+	"source": "outputs of the reference implementation's frame builders and notification parser",
+	"silent_payload": "0A0A0A0A00000000",
+	"b0": [
+		{
+			"seq": 1,
+			"a": {
+				"type": 1,
+				"value": 0,
+				"payload": "00000000000000FF"
+			},
+			"b": {
+				"type": 0,
+				"value": 0,
+				"payload": "00000000000000FF"
+			},
+			"wire": "B014000000000000000000FF00000000000000FF"
+		},
+		{
+			"seq": 15,
+			"a": {
+				"type": 3,
+				"value": 0,
+				"payload": null
+			},
+			"b": {
+				"type": 3,
+				"value": 0,
+				"payload": null
+			},
+			"wire": "B0FF00000A0A0A0A000000000A0A0A0A00000000"
+		},
+		{
+			"seq": 0,
+			"a": {
+				"type": 0,
+				"value": 0,
+				"payload": null
+			},
+			"b": {
+				"type": 0,
+				"value": 0,
+				"payload": null
+			},
+			"wire": "B00000000A0A0A0A000000000A0A0A0A00000000"
+		},
+		{
+			"seq": 7,
+			"a": {
+				"type": 3,
+				"value": 35,
+				"payload": "0A0A0A0A64646464"
+			},
+			"b": {
+				"type": 3,
+				"value": 0,
+				"payload": null
+			},
+			"wire": "B07F23000A0A0A0A646464640A0A0A0A00000000"
+		},
+		{
+			"seq": 7,
+			"a": {
+				"type": 2,
+				"value": 92,
+				"payload": "C1AB6EEE0F4C1318"
+			},
+			"b": {
+				"type": 0,
+				"value": 1,
+				"payload": null
+			},
+			"wire": "B0785C01C1AB6EEE0F4C13180A0A0A0A00000000"
+		},
+		{
+			"seq": 5,
+			"a": {
+				"type": 3,
+				"value": 1,
+				"payload": "9AEC4E4B32611A28"
+			},
+			"b": {
+				"type": 0,
+				"value": 59,
+				"payload": "C94D847D172E3140"
+			},
+			"wire": "B05C013B9AEC4E4B32611A28C94D847D172E3140"
+		},
+		{
+			"seq": 1,
+			"a": {
+				"type": 3,
+				"value": 199,
+				"payload": "2925DEB73F301636"
+			},
+			"b": {
+				"type": 1,
+				"value": 200,
+				"payload": "17867B0E5B481E38"
+			},
+			"wire": "B01DC7C82925DEB73F30163617867B0E5B481E38"
+		},
+		{
+			"seq": 14,
+			"a": {
+				"type": 1,
+				"value": 200,
+				"payload": "9E43492118191A06"
+			},
+			"b": {
+				"type": 2,
+				"value": 1,
+				"payload": "27685B9B62530A12"
+			},
+			"wire": "B0E6C8019E43492118191A0627685B9B62530A12"
+		},
+		{
+			"seq": 14,
+			"a": {
+				"type": 3,
+				"value": 199,
+				"payload": "4D93B29612185657"
+			},
+			"b": {
+				"type": 2,
+				"value": 0,
+				"payload": "4344951841613039"
+			},
+			"wire": "B0EEC7004D93B296121856574344951841613039"
+		},
+		{
+			"seq": 4,
+			"a": {
+				"type": 0,
+				"value": 59,
+				"payload": null
+			},
+			"b": {
+				"type": 2,
+				"value": 1,
+				"payload": null
+			},
+			"wire": "B0423B010A0A0A0A000000000A0A0A0A00000000"
+		},
+		{
+			"seq": 11,
+			"a": {
+				"type": 2,
+				"value": 200,
+				"payload": "993E94315823140C"
+			},
+			"b": {
+				"type": 3,
+				"value": 1,
+				"payload": "B337BBB84D114429"
+			},
+			"wire": "B0BBC801993E94315823140CB337BBB84D114429"
+		},
+		{
+			"seq": 12,
+			"a": {
+				"type": 2,
+				"value": 200,
+				"payload": "42420EEB4F330551"
+			},
+			"b": {
+				"type": 1,
+				"value": 179,
+				"payload": "30E8BB8413453B0D"
+			},
+			"wire": "B0C9C8B342420EEB4F33055130E8BB8413453B0D"
+		},
+		{
+			"seq": 10,
+			"a": {
+				"type": 2,
+				"value": 7,
+				"payload": "AB6F3D67511F2B00"
+			},
+			"b": {
+				"type": 2,
+				"value": 50,
+				"payload": "7DCAE8F0500E5062"
+			},
+			"wire": "B0AA0732AB6F3D67511F2B007DCAE8F0500E5062"
+		},
+		{
+			"seq": 13,
+			"a": {
+				"type": 3,
+				"value": 199,
+				"payload": "699C2AE6122D224B"
+			},
+			"b": {
+				"type": 1,
+				"value": 0,
+				"payload": "A431279D142E2038"
+			},
+			"wire": "B0DDC700699C2AE6122D224BA431279D142E2038"
+		},
+		{
+			"seq": 6,
+			"a": {
+				"type": 1,
+				"value": 199,
+				"payload": "84B024E354111455"
+			},
+			"b": {
+				"type": 2,
+				"value": 7,
+				"payload": "8B592EC86023335A"
+			},
+			"wire": "B066C70784B024E3541114558B592EC86023335A"
+		},
+		{
+			"seq": 0,
+			"a": {
+				"type": 1,
+				"value": 1,
+				"payload": "DA56B87B1501384E"
+			},
+			"b": {
+				"type": 1,
+				"value": 199,
+				"payload": null
+			},
+			"wire": "B00501C7DA56B87B1501384E0A0A0A0A00000000"
+		},
+		{
+			"seq": 0,
+			"a": {
+				"type": 1,
+				"value": 100,
+				"payload": "ADAC49D36264504B"
+			},
+			"b": {
+				"type": 2,
+				"value": 199,
+				"payload": "4248DDDA06592F57"
+			},
+			"wire": "B00664C7ADAC49D36264504B4248DDDA06592F57"
+		},
+		{
+			"seq": 3,
+			"a": {
+				"type": 3,
+				"value": 1,
+				"payload": "C3BB643859616034"
+			},
+			"b": {
+				"type": 3,
+				"value": 200,
+				"payload": "DF5763883926505C"
+			},
+			"wire": "B03F01C8C3BB643859616034DF5763883926505C"
+		},
+		{
+			"seq": 2,
+			"a": {
+				"type": 0,
+				"value": 7,
+				"payload": "CC265DE331556010"
+			},
+			"b": {
+				"type": 0,
+				"value": 200,
+				"payload": "2488230D4D1B3D4A"
+			},
+			"wire": "B02007C8CC265DE3315560102488230D4D1B3D4A"
+		},
+		{
+			"seq": 15,
+			"a": {
+				"type": 1,
+				"value": 142,
+				"payload": null
+			},
+			"b": {
+				"type": 2,
+				"value": 1,
+				"payload": "1CEF55985B0D285F"
+			},
+			"wire": "B0F68E010A0A0A0A000000001CEF55985B0D285F"
+		},
+		{
+			"seq": 5,
+			"a": {
+				"type": 0,
+				"value": 100,
+				"payload": null
+			},
+			"b": {
+				"type": 2,
+				"value": 200,
+				"payload": "9A80E88A13231006"
+			},
+			"wire": "B05264C80A0A0A0A000000009A80E88A13231006"
+		},
+		{
+			"seq": 12,
+			"a": {
+				"type": 2,
+				"value": 200,
+				"payload": "333D20EE2E401B2F"
+			},
+			"b": {
+				"type": 2,
+				"value": 199,
+				"payload": "13AD60A508484627"
+			},
+			"wire": "B0CAC8C7333D20EE2E401B2F13AD60A508484627"
+		},
+		{
+			"seq": 8,
+			"a": {
+				"type": 2,
+				"value": 7,
+				"payload": "771136D62B273B53"
+			},
+			"b": {
+				"type": 1,
+				"value": 200,
+				"payload": "80284B1D4631472D"
+			},
+			"wire": "B08907C8771136D62B273B5380284B1D4631472D"
+		},
+		{
+			"seq": 7,
+			"a": {
+				"type": 2,
+				"value": 171,
+				"payload": null
+			},
+			"b": {
+				"type": 2,
+				"value": 0,
+				"payload": "6FACA9941F123204"
+			},
+			"wire": "B07AAB000A0A0A0A000000006FACA9941F123204"
+		},
+		{
+			"seq": 1,
+			"a": {
+				"type": 0,
+				"value": 100,
+				"payload": null
+			},
+			"b": {
+				"type": 2,
+				"value": 1,
+				"payload": "0F5CE4DC131C3926"
+			},
+			"wire": "B01264010A0A0A0A000000000F5CE4DC131C3926"
+		},
+		{
+			"seq": 13,
+			"a": {
+				"type": 3,
+				"value": 199,
+				"payload": "5E9F4379524A403F"
+			},
+			"b": {
+				"type": 2,
+				"value": 200,
+				"payload": null
+			},
+			"wire": "B0DEC7C85E9F4379524A403F0A0A0A0A00000000"
+		},
+		{
+			"seq": 4,
+			"a": {
+				"type": 0,
+				"value": 200,
+				"payload": null
+			},
+			"b": {
+				"type": 2,
+				"value": 200,
+				"payload": "9E8E33B737425906"
+			},
+			"wire": "B042C8C80A0A0A0A000000009E8E33B737425906"
+		},
+		{
+			"seq": 12,
+			"a": {
+				"type": 3,
+				"value": 7,
+				"payload": null
+			},
+			"b": {
+				"type": 1,
+				"value": 1,
+				"payload": "D54D4B2F2A372436"
+			},
+			"wire": "B0CD07010A0A0A0A00000000D54D4B2F2A372436"
+		},
+		{
+			"seq": 0,
+			"a": {
+				"type": 2,
+				"value": 100,
+				"payload": "217D639F194D5842"
+			},
+			"b": {
+				"type": 0,
+				"value": 100,
+				"payload": "98EE42A9150B6254"
+			},
+			"wire": "B0086464217D639F194D584298EE42A9150B6254"
+		},
+		{
+			"seq": 10,
+			"a": {
+				"type": 2,
+				"value": 7,
+				"payload": "A153C60B2B00255B"
+			},
+			"b": {
+				"type": 0,
+				"value": 199,
+				"payload": null
+			},
+			"wire": "B0A807C7A153C60B2B00255B0A0A0A0A00000000"
+		},
+		{
+			"seq": 1,
+			"a": {
+				"type": 0,
+				"value": 199,
+				"payload": null
+			},
+			"b": {
+				"type": 0,
+				"value": 7,
+				"payload": null
+			},
+			"wire": "B010C7070A0A0A0A000000000A0A0A0A00000000"
+		},
+		{
+			"seq": 8,
+			"a": {
+				"type": 1,
+				"value": 199,
+				"payload": "D92F0A920B584160"
+			},
+			"b": {
+				"type": 3,
+				"value": 7,
+				"payload": "D3A83FD60E4F1D01"
+			},
+			"wire": "B087C707D92F0A920B584160D3A83FD60E4F1D01"
+		},
+		{
+			"seq": 9,
+			"a": {
+				"type": 1,
+				"value": 100,
+				"payload": "96EF669E1F611825"
+			},
+			"b": {
+				"type": 1,
+				"value": 200,
+				"payload": "98C7BC8E1322193F"
+			},
+			"wire": "B09564C896EF669E1F61182598C7BC8E1322193F"
+		},
+		{
+			"seq": 8,
+			"a": {
+				"type": 3,
+				"value": 7,
+				"payload": "CE936F263D3A1B4F"
+			},
+			"b": {
+				"type": 1,
+				"value": 200,
+				"payload": null
+			},
+			"wire": "B08D07C8CE936F263D3A1B4F0A0A0A0A00000000"
+		},
+		{
+			"seq": 11,
+			"a": {
+				"type": 2,
+				"value": 199,
+				"payload": "0F15EC0A511C0700"
+			},
+			"b": {
+				"type": 2,
+				"value": 199,
+				"payload": "60A3E67504613E20"
+			},
+			"wire": "B0BAC7C70F15EC0A511C070060A3E67504613E20"
+		},
+		{
+			"seq": 10,
+			"a": {
+				"type": 0,
+				"value": 1,
+				"payload": "51551A5F091A1B3F"
+			},
+			"b": {
+				"type": 2,
+				"value": 190,
+				"payload": "1ABE7F0A4C464735"
+			},
+			"wire": "B0A201BE51551A5F091A1B3F1ABE7F0A4C464735"
+		},
+		{
+			"seq": 7,
+			"a": {
+				"type": 3,
+				"value": 100,
+				"payload": "24A95CD84C094B1C"
+			},
+			"b": {
+				"type": 3,
+				"value": 0,
+				"payload": null
+			},
+			"wire": "B07F640024A95CD84C094B1C0A0A0A0A00000000"
+		},
+		{
+			"seq": 2,
+			"a": {
+				"type": 2,
+				"value": 200,
+				"payload": "54D6BB9B55370025"
+			},
+			"b": {
+				"type": 3,
+				"value": 0,
+				"payload": "7D222F9604593B41"
+			},
+			"wire": "B02BC80054D6BB9B553700257D222F9604593B41"
+		},
+		{
+			"seq": 11,
+			"a": {
+				"type": 2,
+				"value": 0,
+				"payload": "93DF28325E604F3F"
+			},
+			"b": {
+				"type": 3,
+				"value": 100,
+				"payload": null
+			},
+			"wire": "B0BB006493DF28325E604F3F0A0A0A0A00000000"
+		},
+		{
+			"seq": 12,
+			"a": {
+				"type": 2,
+				"value": 100,
+				"payload": "D4CC7F895E270015"
+			},
+			"b": {
+				"type": 2,
+				"value": 0,
+				"payload": "CCDA52EA052E3A0D"
+			},
+			"wire": "B0CA6400D4CC7F895E270015CCDA52EA052E3A0D"
+		},
+		{
+			"seq": 3,
+			"a": {
+				"type": 2,
+				"value": 199,
+				"payload": null
+			},
+			"b": {
+				"type": 3,
+				"value": 0,
+				"payload": "8398AEDA2A321725"
+			},
+			"wire": "B03BC7000A0A0A0A000000008398AEDA2A321725"
+		},
+		{
+			"seq": 10,
+			"a": {
+				"type": 3,
+				"value": 7,
+				"payload": "EAC2CBD23759484F"
+			},
+			"b": {
+				"type": 1,
+				"value": 100,
+				"payload": null
+			},
+			"wire": "B0AD0764EAC2CBD23759484F0A0A0A0A00000000"
+		},
+		{
+			"seq": 8,
+			"a": {
+				"type": 2,
+				"value": 1,
+				"payload": "27B553EB603F1730"
+			},
+			"b": {
+				"type": 0,
+				"value": 7,
+				"payload": "B37AC0B00E0E140D"
+			},
+			"wire": "B088010727B553EB603F1730B37AC0B00E0E140D"
+		},
+		{
+			"seq": 11,
+			"a": {
+				"type": 3,
+				"value": 7,
+				"payload": "B9637B7522625B4D"
+			},
+			"b": {
+				"type": 3,
+				"value": 1,
+				"payload": "0F4913375B23530E"
+			},
+			"wire": "B0BF0701B9637B7522625B4D0F4913375B23530E"
+		},
+		{
+			"seq": 2,
+			"a": {
+				"type": 2,
+				"value": 100,
+				"payload": "9D8EC92807083E12"
+			},
+			"b": {
+				"type": 3,
+				"value": 200,
+				"payload": null
+			},
+			"wire": "B02B64C89D8EC92807083E120A0A0A0A00000000"
+		},
+		{
+			"seq": 11,
+			"a": {
+				"type": 0,
+				"value": 199,
+				"payload": "DC5D18DF353E5F55"
+			},
+			"b": {
+				"type": 1,
+				"value": 0,
+				"payload": null
+			},
+			"wire": "B0B1C700DC5D18DF353E5F550A0A0A0A00000000"
+		},
+		{
+			"seq": 15,
+			"a": {
+				"type": 0,
+				"value": 199,
+				"payload": null
+			},
+			"b": {
+				"type": 0,
+				"value": 100,
+				"payload": "0B95C45410054E26"
+			},
+			"wire": "B0F0C7640A0A0A0A000000000B95C45410054E26"
+		},
+		{
+			"seq": 4,
+			"a": {
+				"type": 3,
+				"value": 7,
+				"payload": null
+			},
+			"b": {
+				"type": 3,
+				"value": 0,
+				"payload": "7DCBD2190E3B4939"
+			},
+			"wire": "B04F07000A0A0A0A000000007DCBD2190E3B4939"
+		},
+		{
+			"seq": 11,
+			"a": {
+				"type": 0,
+				"value": 1,
+				"payload": null
+			},
+			"b": {
+				"type": 2,
+				"value": 1,
+				"payload": "A10A47D054115E35"
+			},
+			"wire": "B0B201010A0A0A0A00000000A10A47D054115E35"
+		},
+		{
+			"seq": 11,
+			"a": {
+				"type": 3,
+				"value": 0,
+				"payload": "5BC6936D07461353"
+			},
+			"b": {
+				"type": 3,
+				"value": 1,
+				"payload": "589F1E4B045C1A48"
+			},
+			"wire": "B0BF00015BC6936D07461353589F1E4B045C1A48"
+		},
+		{
+			"seq": 4,
+			"a": {
+				"type": 1,
+				"value": 200,
+				"payload": null
+			},
+			"b": {
+				"type": 0,
+				"value": 199,
+				"payload": "2EA47763363B582F"
+			},
+			"wire": "B044C8C70A0A0A0A000000002EA47763363B582F"
+		},
+		{
+			"seq": 1,
+			"a": {
+				"type": 0,
+				"value": 100,
+				"payload": "6F30C8541B4B2412"
+			},
+			"b": {
+				"type": 0,
+				"value": 4,
+				"payload": "D16F322A5B5E4419"
+			},
+			"wire": "B01064046F30C8541B4B2412D16F322A5B5E4419"
+		},
+		{
+			"seq": 5,
+			"a": {
+				"type": 3,
+				"value": 199,
+				"payload": null
+			},
+			"b": {
+				"type": 2,
+				"value": 200,
+				"payload": "2756838F3B192A32"
+			},
+			"wire": "B05EC7C80A0A0A0A000000002756838F3B192A32"
+		},
+		{
+			"seq": 3,
+			"a": {
+				"type": 1,
+				"value": 200,
+				"payload": "C884232051213D13"
+			},
+			"b": {
+				"type": 1,
+				"value": 200,
+				"payload": "755E687709640C27"
+			},
+			"wire": "B035C8C8C884232051213D13755E687709640C27"
+		},
+		{
+			"seq": 14,
+			"a": {
+				"type": 1,
+				"value": 7,
+				"payload": "E752211659214934"
+			},
+			"b": {
+				"type": 1,
+				"value": 7,
+				"payload": "17599F710919413E"
+			},
+			"wire": "B0E50707E75221165921493417599F710919413E"
+		},
+		{
+			"seq": 13,
+			"a": {
+				"type": 2,
+				"value": 0,
+				"payload": "8C79E1410E50051E"
+			},
+			"b": {
+				"type": 0,
+				"value": 0,
+				"payload": "B47EED745E461D5C"
+			},
+			"wire": "B0D800008C79E1410E50051EB47EED745E461D5C"
+		},
+		{
+			"seq": 1,
+			"a": {
+				"type": 2,
+				"value": 200,
+				"payload": "0C721E6552456242"
+			},
+			"b": {
+				"type": 3,
+				"value": 199,
+				"payload": "9514453734361C3A"
+			},
+			"wire": "B01BC8C70C721E65524562429514453734361C3A"
+		},
+		{
+			"seq": 5,
+			"a": {
+				"type": 2,
+				"value": 1,
+				"payload": "A34E43BE3E3C2E13"
+			},
+			"b": {
+				"type": 3,
+				"value": 128,
+				"payload": null
+			},
+			"wire": "B05B0180A34E43BE3E3C2E130A0A0A0A00000000"
+		},
+		{
+			"seq": 11,
+			"a": {
+				"type": 2,
+				"value": 1,
+				"payload": "7AB1259112354144"
+			},
+			"b": {
+				"type": 3,
+				"value": 2,
+				"payload": "99DB4B5D403B4462"
+			},
+			"wire": "B0BB01027AB125911235414499DB4B5D403B4462"
+		},
+		{
+			"seq": 15,
+			"a": {
+				"type": 0,
+				"value": 1,
+				"payload": "157DE7A930431C36"
+			},
+			"b": {
+				"type": 2,
+				"value": 7,
+				"payload": "6659EBB718271607"
+			},
+			"wire": "B0F20107157DE7A930431C366659EBB718271607"
+		},
+		{
+			"seq": 10,
+			"a": {
+				"type": 3,
+				"value": 7,
+				"payload": null
+			},
+			"b": {
+				"type": 3,
+				"value": 200,
+				"payload": null
+			},
+			"wire": "B0AF07C80A0A0A0A000000000A0A0A0A00000000"
+		},
+		{
+			"seq": 6,
+			"a": {
+				"type": 1,
+				"value": 200,
+				"payload": "1825B0B4425E185D"
+			},
+			"b": {
+				"type": 0,
+				"value": 170,
+				"payload": "3E3F5DC84B151139"
+			},
+			"wire": "B064C8AA1825B0B4425E185D3E3F5DC84B151139"
+		},
+		{
+			"seq": 10,
+			"a": {
+				"type": 1,
+				"value": 100,
+				"payload": "B9A43E975B10332D"
+			},
+			"b": {
+				"type": 1,
+				"value": 7,
+				"payload": "9C4F7B1811504547"
+			},
+			"wire": "B0A56407B9A43E975B10332D9C4F7B1811504547"
+		},
+		{
+			"seq": 12,
+			"a": {
+				"type": 0,
+				"value": 0,
+				"payload": "12EB77814C571635"
+			},
+			"b": {
+				"type": 1,
+				"value": 199,
+				"payload": "75A687AD4F080E4A"
+			},
+			"wire": "B0C100C712EB77814C57163575A687AD4F080E4A"
+		}
+	],
+	"bf": [
+		{
+			"args": [60, 60],
+			"wire": "BF3C3CA0A00000"
+		},
+		{
+			"args": [158, 52, 109, 106, 116, 19],
+			"wire": "BF9E346D6A7413"
+		},
+		{
+			"args": [5, 150, 211, 6, 74, 184],
+			"wire": "BF0596D3064AB8"
+		},
+		{
+			"args": [114, 136, 51, 5, 28, 75],
+			"wire": "BF728833051C4B"
+		},
+		{
+			"args": [7, 9, 132, 144, 76, 77],
+			"wire": "BF070984904C4D"
+		},
+		{
+			"args": [63, 0, 99, 150, 10, 66],
+			"wire": "BF3F0063960A42"
+		},
+		{
+			"args": [132, 185, 169, 156, 20, 239],
+			"wire": "BF84B9A99C14EF"
+		},
+		{
+			"args": [81, 11, 239, 171, 125, 221],
+			"wire": "BF510BEFAB7DDD"
+		},
+		{
+			"args": [15, 190, 61, 202, 139, 79],
+			"wire": "BF0FBE3DCA8B4F"
+		},
+		{
+			"args": [147, 118, 168, 176, 5, 254],
+			"wire": "BF9376A8B005FE"
+		},
+		{
+			"args": [6, 101, 80, 141, 249, 128],
+			"wire": "BF0665508DF980"
+		},
+		{
+			"args": [200, 86, 58, 66, 105, 241],
+			"wire": "BFC8563A4269F1"
+		},
+		{
+			"args": [12, 11, 152, 44, 232, 36],
+			"wire": "BF0C0B982CE824"
+		},
+		{
+			"args": [2, 72, 15, 245, 103, 0],
+			"wire": "BF02480FF56700"
+		},
+		{
+			"args": [0, 175, 84, 90, 46, 120],
+			"wire": "BF00AF545A2E78"
+		},
+		{
+			"args": [70, 112, 146, 157, 131, 229],
+			"wire": "BF4670929D83E5"
+		},
+		{
+			"args": [152, 62, 129, 87, 199, 232],
+			"wire": "BF983E8157C7E8"
+		},
+		{
+			"args": [52, 35, 82, 0, 94, 80],
+			"wire": "BF342352005E50"
+		},
+		{
+			"args": [98, 56, 202, 191, 99, 75],
+			"wire": "BF6238CABF634B"
+		},
+		{
+			"args": [10, 79, 92, 32, 142, 52],
+			"wire": "BF0A4F5C208E34"
+		},
+		{
+			"args": [14, 182, 1, 199, 56, 68],
+			"wire": "BF0EB601C73844"
+		}
+	],
+	"led": [
+		{
+			"index": 0,
+			"wire": "5000000000000000000000000000000000"
+		},
+		{
+			"index": 1,
+			"wire": "5001000000000000000000000000000000"
+		},
+		{
+			"index": 2,
+			"wire": "5002000000000000000000000000000000"
+		},
+		{
+			"index": 3,
+			"wire": "5003000000000000000000000000000000"
+		},
+		{
+			"index": 4,
+			"wire": "5004000000000000000000000000000000"
+		},
+		{
+			"index": 5,
+			"wire": "5005000000000000000000000000000000"
+		}
+	],
+	"notify": [
+		{
+			"wire": "B1020200",
+			"kind": "intensity",
+			"data": {
+				"seq": 2,
+				"a": 2,
+				"b": 0
+			}
+		},
+		{
+			"wire": "B1000A14",
+			"kind": "intensity",
+			"data": {
+				"seq": 0,
+				"a": 10,
+				"b": 20
+			}
+		},
+		{
+			"wire": "B10FC8C8",
+			"kind": "intensity",
+			"data": {
+				"seq": 15,
+				"a": 200,
+				"b": 200
+			}
+		},
+		{
+			"wire": "B10100",
+			"kind": "accessory",
+			"data": {}
+		},
+		{
+			"wire": "E0ED01",
+			"kind": "unsupported",
+			"data": {
+				"cmd": "ED"
+			}
+		},
+		{
+			"wire": "E0A001",
+			"kind": "unsupported",
+			"data": {
+				"cmd": "A0"
+			}
+		},
+		{
+			"wire": "5300D5B1AC74",
+			"kind": "identity",
+			"data": {
+				"tail": "D5B1AC74"
+			}
+		},
+		{
+			"wire": "BD043232321E509632",
+			"kind": "strength_mode",
+			"data": {
+				"echo": "BD043232321E509632"
+			}
+		},
+		{
+			"wire": "51001064",
+			"kind": "reply",
+			"data": {
+				"cmd": "51"
+			}
+		},
+		{
+			"wire": "A10300",
+			"kind": "reply",
+			"data": {
+				"cmd": "A1"
+			}
+		},
+		{
+			"wire": "F1010000",
+			"kind": "accessory",
+			"data": {}
+		},
+		{
+			"wire": "",
+			"kind": "unknown",
+			"data": {}
+		},
+		{
+			"wire": "B1",
+			"kind": "accessory",
+			"data": {}
+		},
+		{
+			"wire": "E0",
+			"kind": "accessory",
+			"data": {}
+		},
+		{
+			"wire": "00",
+			"kind": "accessory",
+			"data": {}
+		},
+		{
+			"wire": "B10B3387",
+			"kind": "intensity",
+			"data": {
+				"seq": 11,
+				"a": 51,
+				"b": 135
+			}
+		},
+		{
+			"wire": "B10C9E30",
+			"kind": "intensity",
+			"data": {
+				"seq": 12,
+				"a": 158,
+				"b": 48
+			}
+		},
+		{
+			"wire": "B1014ABE",
+			"kind": "intensity",
+			"data": {
+				"seq": 1,
+				"a": 74,
+				"b": 190
+			}
+		},
+		{
+			"wire": "B10F315D",
+			"kind": "intensity",
+			"data": {
+				"seq": 15,
+				"a": 49,
+				"b": 93
+			}
+		},
+		{
+			"wire": "B109489F",
+			"kind": "intensity",
+			"data": {
+				"seq": 9,
+				"a": 72,
+				"b": 159
+			}
+		},
+		{
+			"wire": "B1047871",
+			"kind": "intensity",
+			"data": {
+				"seq": 4,
+				"a": 120,
+				"b": 113
+			}
+		},
+		{
+			"wire": "B10B460F",
+			"kind": "intensity",
+			"data": {
+				"seq": 11,
+				"a": 70,
+				"b": 15
+			}
+		},
+		{
+			"wire": "B106473B",
+			"kind": "intensity",
+			"data": {
+				"seq": 6,
+				"a": 71,
+				"b": 59
+			}
+		},
+		{
+			"wire": "B1002FAA",
+			"kind": "intensity",
+			"data": {
+				"seq": 0,
+				"a": 47,
+				"b": 170
+			}
+		},
+		{
+			"wire": "B10F22C2",
+			"kind": "intensity",
+			"data": {
+				"seq": 15,
+				"a": 34,
+				"b": 194
+			}
+		},
+		{
+			"wire": "B104399F",
+			"kind": "intensity",
+			"data": {
+				"seq": 4,
+				"a": 57,
+				"b": 159
+			}
+		},
+		{
+			"wire": "B1018FA5",
+			"kind": "intensity",
+			"data": {
+				"seq": 1,
+				"a": 143,
+				"b": 165
+			}
+		},
+		{
+			"wire": "B10AA331",
+			"kind": "intensity",
+			"data": {
+				"seq": 10,
+				"a": 163,
+				"b": 49
+			}
+		},
+		{
+			"wire": "B1042757",
+			"kind": "intensity",
+			"data": {
+				"seq": 4,
+				"a": 39,
+				"b": 87
+			}
+		},
+		{
+			"wire": "B1034C6B",
+			"kind": "intensity",
+			"data": {
+				"seq": 3,
+				"a": 76,
+				"b": 107
+			}
+		},
+		{
+			"wire": "B1043927",
+			"kind": "intensity",
+			"data": {
+				"seq": 4,
+				"a": 57,
+				"b": 39
+			}
+		},
+		{
+			"wire": "B10B8A55",
+			"kind": "intensity",
+			"data": {
+				"seq": 11,
+				"a": 138,
+				"b": 85
+			}
+		},
+		{
+			"wire": "B105B54A",
+			"kind": "intensity",
+			"data": {
+				"seq": 5,
+				"a": 181,
+				"b": 74
+			}
+		},
+		{
+			"wire": "B102A5BD",
+			"kind": "intensity",
+			"data": {
+				"seq": 2,
+				"a": 165,
+				"b": 189
+			}
+		},
+		{
+			"wire": "B1024BA4",
+			"kind": "intensity",
+			"data": {
+				"seq": 2,
+				"a": 75,
+				"b": 164
+			}
+		}
+	],
+	"names": [
+		{
+			"name": "47L121000",
+			"family": "v3"
+		},
+		{
+			"name": "47L121000_O3",
+			"family": "recovery"
+		},
+		{
+			"name": "47L121000_OFF",
+			"family": "recovery"
+		},
+		{
+			"name": "47L121000_O",
+			"family": "v3"
+		},
+		{
+			"name": "Dfu12345",
+			"family": "recovery"
+		},
+		{
+			"name": "Dfu1234",
+			"family": "v3-dfu"
+		},
+		{
+			"name": "47L120100",
+			"family": "pps1"
+		},
+		{
+			"name": "YLS01",
+			"family": null
+		},
+		{
+			"name": "SomethingElse",
+			"family": null
+		},
+		{
+			"name": "",
+			"family": null
+		}
+	]
+}

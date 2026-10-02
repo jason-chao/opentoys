@@ -1,0 +1,447 @@
+/* opentoys: the Nocturne look, in four colour modes. Ember (deep night tones lit by warm ember) and Dawn (warm
+   paper) follow the system until the viewer picks a mode in the header (data-theme on <html>); Tide (dark teal)
+   and Silk (light blush) are chosen there too.
+   One sans-serif for every language: Manrope for Latin (self-hosted), the system's CJK fonts for Chinese. */
+@font-face {
+	font-family: 'Manrope';
+	font-style: normal;
+	font-weight: 200 800;
+	font-display: swap;
+	src: url('/fonts/manrope/manrope-latin-wght-normal.woff2') format('woff2');
+}
+
+:root {
+	/* One spacing scale (Settings, About, the Control cards): gaps between sections, cards, and lines in a card. */
+	--space-section: 1.75rem;
+	--space-card: 0.75rem;
+	--space-line: 0.5rem;
+	--space-pad: 1rem;
+	--font-sans: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
+	--font-cjk-hant: 'PingFang TC', 'Noto Sans CJK TC', 'Source Han Sans TC', 'Microsoft JhengHei', sans-serif;
+	--font-cjk-hans: 'PingFang SC', 'Noto Sans CJK SC', 'Source Han Sans SC', 'Microsoft YaHei', sans-serif;
+	--radius: 1.25rem;
+	--tabbar-h: 4.25rem;
+}
+
+/* colour modes: generated from one table (tokens checked for WCAG contrast); edit all blocks together */
+:root {
+	/* Dawn (light): also what a light system gets before a mode is chosen */
+	--bg: #fbf5f1;
+	--bg-glow-a: rgb(233 150 120 / 0.18);
+	--bg-glow-b: rgb(190 120 170 / 0.12);
+	--raised: #ffffff;
+	--surface: rgb(80 30 50 / 0.045);
+	--surface-2: rgb(80 30 50 / 0.08);
+	--line: rgb(80 30 50 / 0.16);
+	--text: #2a1420;
+	--soft: #56404b;
+	--faint: #6b5762;
+	--accent: #a8431c;
+	--accent-soft: rgb(200 90 50 / 0.12);
+	--on-accent: #2a0a1c;
+	--button: linear-gradient(120deg, #ffd6b0, #ff9a64 55%, #ec7a8c);
+	--button-shadow: rgb(255 120 80 / 0.7);
+	--vib: #c2410c;
+	--vib-fill: rgb(194 65 12 / 0.22);
+	--estim: #0c6b64;
+	--danger: #b42318;
+	--danger-soft: rgb(180 35 24 / 0.1);
+	--stop-bg: #2a1420;
+	--stop-fg: #fff6ef;
+	--focus: #a8431c;
+	--shadow: 0 14px 40px -24px rgb(80 30 50 / 0.45);
+	--orb-0: #6e1f45;
+	--orb-1: #c7466a;
+	--orb-2: #ff8a4c;
+	--orb-3: #ffe6c4;
+	--orb-fil: #fff4d6;
+	--orb-fil-a: #0a9a8c;
+	--orb-fil-b: #7a45e0;
+	--dot-ring: #9a6b00;
+	--dot-a: #0a8a7e;
+	--dot-b: #7a45e0;
+	--orb-light: 1;
+	color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+	/* Ember (dark): what a dark system gets before a mode is chosen */
+	:root:not([data-theme]) {
+		--bg: #0b0610;
+		--bg-glow-a: rgb(120 30 70 / 0.35);
+		--bg-glow-b: rgb(60 14 50 / 0.55);
+		--raised: #1a0f1d;
+		--surface: rgb(255 220 200 / 0.05);
+		--surface-2: rgb(255 220 200 / 0.09);
+		--line: rgb(255 200 170 / 0.17);
+		--text: #f6e8dc;
+		--soft: #d6c0b7;
+		--faint: #ab959d;
+		--accent: #ffab78;
+		--accent-soft: rgb(255 171 120 / 0.14);
+		--on-accent: #2a0a1c;
+		--button: linear-gradient(120deg, #ffd6b0, #ff9a64 55%, #ec7a8c);
+		--button-shadow: rgb(255 120 80 / 0.7);
+		--vib: #ff9a5c;
+		--vib-fill: rgb(255 154 92 / 0.28);
+		--estim: #7fd6c8;
+		--danger: #ff9b8a;
+		--danger-soft: rgb(255 120 100 / 0.14);
+		--stop-bg: #fff1e6;
+		--stop-fg: #2a0a1c;
+		--focus: #ffab78;
+		--shadow: 0 14px 40px -20px rgb(0 0 0 / 0.8);
+		--orb-0: #2b0b26;
+		--orb-1: #a33a55;
+		--orb-2: #ff8a4c;
+		--orb-3: #ffe3b3;
+		--orb-fil: #fff0c8;
+		--orb-fil-a: #3ff0d8;
+		--orb-fil-b: #b68cff;
+		--dot-ring: #fff0c8;
+		--dot-a: #3ff0d8;
+		--dot-b: #b68cff;
+		--orb-light: 0;
+		color-scheme: dark;
+	}
+}
+:root[data-theme='ember'] {
+	--bg: #0b0610;
+	--bg-glow-a: rgb(120 30 70 / 0.35);
+	--bg-glow-b: rgb(60 14 50 / 0.55);
+	--raised: #1a0f1d;
+	--surface: rgb(255 220 200 / 0.05);
+	--surface-2: rgb(255 220 200 / 0.09);
+	--line: rgb(255 200 170 / 0.17);
+	--text: #f6e8dc;
+	--soft: #d6c0b7;
+	--faint: #ab959d;
+	--accent: #ffab78;
+	--accent-soft: rgb(255 171 120 / 0.14);
+	--on-accent: #2a0a1c;
+	--button: linear-gradient(120deg, #ffd6b0, #ff9a64 55%, #ec7a8c);
+	--button-shadow: rgb(255 120 80 / 0.7);
+	--vib: #ff9a5c;
+	--vib-fill: rgb(255 154 92 / 0.28);
+	--estim: #7fd6c8;
+	--danger: #ff9b8a;
+	--danger-soft: rgb(255 120 100 / 0.14);
+	--stop-bg: #fff1e6;
+	--stop-fg: #2a0a1c;
+	--focus: #ffab78;
+	--shadow: 0 14px 40px -20px rgb(0 0 0 / 0.8);
+	--orb-0: #2b0b26;
+	--orb-1: #a33a55;
+	--orb-2: #ff8a4c;
+	--orb-3: #ffe3b3;
+	--orb-fil: #fff0c8;
+	--orb-fil-a: #3ff0d8;
+	--orb-fil-b: #b68cff;
+	--dot-ring: #fff0c8;
+	--dot-a: #3ff0d8;
+	--dot-b: #b68cff;
+	--orb-light: 0;
+	color-scheme: dark;
+}
+:root[data-theme='tide'] {
+	--bg: #03121b;
+	--bg-glow-a: rgb(30 110 125 / 0.32);
+	--bg-glow-b: rgb(40 60 120 / 0.35);
+	--raised: #0b2230;
+	--surface: rgb(160 225 235 / 0.06);
+	--surface-2: rgb(160 225 235 / 0.1);
+	--line: rgb(190 240 250 / 0.18);
+	--text: #e8f7f8;
+	--soft: #b4d3d9;
+	--faint: #8fb3bb;
+	--accent: #7fe6d6;
+	--accent-soft: rgb(127 230 214 / 0.15);
+	--on-accent: #03202a;
+	--button: linear-gradient(120deg, #e6fbff, #8febdd 55%, #62c7d6);
+	--button-shadow: rgb(95 224 209 / 0.6);
+	--vib: #5fe0d1;
+	--vib-fill: rgb(95 224 209 / 0.26);
+	--estim: #d4b8ff;
+	--danger: #ffa08f;
+	--danger-soft: rgb(255 130 110 / 0.14);
+	--stop-bg: #ffa391;
+	--stop-fg: #2a0a08;
+	--focus: #7fe6d6;
+	--shadow: 0 14px 40px -20px rgb(0 0 0 / 0.8);
+	--orb-0: #031a26;
+	--orb-1: #0d5f6a;
+	--orb-2: #5fe0d1;
+	--orb-3: #e6fbff;
+	--orb-fil: #e0ccff;
+	--orb-fil-a: #ffb020;
+	--orb-fil-b: #ff5fa2;
+	--dot-ring: #e0ccff;
+	--dot-a: #ffb020;
+	--dot-b: #ff5fa2;
+	--orb-light: 0;
+	color-scheme: dark;
+}
+:root[data-theme='silk'] {
+	--bg: #f8f0ea;
+	--bg-glow-a: rgb(241 196 190 / 0.55);
+	--bg-glow-b: rgb(222 206 240 / 0.5);
+	--raised: #fffaf6;
+	--surface: rgb(90 50 70 / 0.05);
+	--surface-2: rgb(90 50 70 / 0.09);
+	--line: rgb(90 50 70 / 0.17);
+	--text: #3b2533;
+	--soft: #5f4656;
+	--faint: #6f5766;
+	--accent: #97395a;
+	--accent-soft: rgb(176 80 106 / 0.12);
+	--on-accent: #3b2533;
+	--button: linear-gradient(120deg, #f6d2c4, #ecb3b6 55%, #cdb7e6);
+	--button-shadow: rgb(160 90 110 / 0.55);
+	--vib: #ad4468;
+	--vib-fill: rgb(173 68 104 / 0.2);
+	--estim: #5c53a8;
+	--danger: #a8261c;
+	--danger-soft: rgb(168 38 28 / 0.1);
+	--stop-bg: #3b2533;
+	--stop-fg: #fff6f0;
+	--focus: #97395a;
+	--shadow: 0 14px 40px -24px rgb(110 60 70 / 0.45);
+	--orb-0: #a8607a;
+	--orb-1: #d890a4;
+	--orb-2: #ffc9b4;
+	--orb-3: #fffaf4;
+	--orb-fil: #8a5a12;
+	--orb-fil-a: #12806f;
+	--orb-fil-b: #6f43c9;
+	--dot-ring: #8a5a12;
+	--dot-a: #12806f;
+	--dot-b: #6f43c9;
+	--orb-light: 1;
+	color-scheme: light;
+}
+/* end colour modes */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+html {
+	font-family: var(--font-sans);
+	font-weight: 450;
+	line-height: 1.55;
+	color: var(--text);
+	background: var(--bg);
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+html:lang(zh-Hant) {
+	font-family: 'Manrope', var(--font-cjk-hant);
+	letter-spacing: 0.02em;
+}
+html:lang(zh-Hans-CN) {
+	font-family: 'Manrope', var(--font-cjk-hans);
+	letter-spacing: 0.02em;
+}
+body {
+	margin: 0;
+	min-height: 100svh;
+	background:
+		radial-gradient(90% 50% at 50% -5%, var(--bg-glow-a), transparent 70%),
+		radial-gradient(120% 70% at 50% 115%, var(--bg-glow-b), transparent 70%), var(--bg);
+	background-attachment: fixed;
+}
+a {
+	color: inherit;
+}
+h1,
+h2,
+h3 {
+	line-height: 1.2;
+	font-weight: 600;
+	letter-spacing: -0.01em;
+}
+:focus-visible {
+	outline: 2px solid var(--focus);
+	outline-offset: 3px;
+}
+button,
+input,
+select,
+textarea {
+	font: inherit;
+	color: inherit;
+}
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip-path: inset(50%);
+	white-space: nowrap;
+}
+
+/* Shared controls */
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5em;
+	min-height: 48px;
+	padding: 0 1.3rem;
+	border: 1px solid var(--line);
+	border-radius: 999px;
+	background: var(--surface);
+	color: var(--text);
+	font-weight: 600;
+	text-decoration: none;
+	white-space: nowrap;
+	cursor: pointer;
+}
+.btn:hover {
+	background: var(--surface-2);
+}
+.btn.primary {
+	border: 0;
+	background: var(--button);
+	color: var(--on-accent);
+	box-shadow: 0 10px 30px -14px var(--button-shadow);
+}
+.btn.danger {
+	border-color: var(--danger);
+	color: var(--danger);
+	background: var(--danger-soft);
+}
+.btn.small {
+	min-height: 44px;
+	padding: 0 1rem;
+	font-size: 0.92rem;
+}
+.btn.wide {
+	width: 100%;
+}
+.btn:disabled,
+.btn[aria-disabled='true'] {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+.card {
+	border: 1px solid var(--line);
+	border-radius: var(--radius);
+	background: var(--surface);
+	padding: 1rem;
+}
+.note {
+	color: var(--soft);
+	font-size: 0.92rem;
+}
+.faint {
+	color: var(--faint);
+}
+.badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35em;
+	padding: 0.1rem 0.55rem;
+	border: 1px solid var(--line);
+	border-radius: 999px;
+	font-size: 0.78rem;
+	font-weight: 600;
+	color: var(--soft);
+	white-space: nowrap;
+}
+.badge.estim {
+	border-color: var(--estim);
+	color: var(--estim);
+}
+.page {
+	max-width: 46rem;
+	margin: 0 auto;
+	padding: 1rem 1rem calc(var(--tabbar-h) + 6rem);
+}
+.page > h1 {
+	margin: 0.5rem 0 0.25rem;
+	font-size: clamp(1.7rem, 7vw, 2.3rem);
+}
+.lede {
+	margin: 0 0 1.25rem;
+	color: var(--soft);
+}
+/* An on/off switch with its label (a checkbox with role="switch"). */
+.toggle {
+	display: flex;
+	align-items: center;
+	gap: 0.8rem;
+	min-height: 44px;
+	font-weight: 650;
+	cursor: pointer;
+}
+.toggle input {
+	appearance: none;
+	flex: none;
+	position: relative;
+	width: 3.1rem;
+	height: 1.8rem;
+	margin: 0;
+	border-radius: 999px;
+	background: var(--surface-2);
+	border: 1px solid var(--line);
+	cursor: pointer;
+}
+.toggle input::after {
+	content: '';
+	position: absolute;
+	top: 0.15rem;
+	left: 0.15rem;
+	width: 1.4rem;
+	height: 1.4rem;
+	border-radius: 50%;
+	background: var(--faint);
+	transition: translate 0.2s;
+}
+.toggle input:checked {
+	background: var(--accent-soft);
+	border-color: var(--accent);
+}
+.toggle input:checked::after {
+	translate: 1.3rem 0;
+	background: var(--accent);
+}
+.toggle input:disabled {
+	opacity: 0.5;
+	cursor: default;
+}
+/* A tick with a statement next to it (an agreement, a confirmation). */
+.check {
+	display: flex;
+	gap: 0.7rem;
+	align-items: flex-start;
+	font-weight: 650;
+	cursor: pointer;
+}
+.check input {
+	flex: none;
+	width: 1.4rem;
+	height: 1.4rem;
+	margin-top: 0.1rem;
+	accent-color: var(--accent);
+}
+input[type='range'] {
+	width: 100%;
+	min-height: 44px;
+	accent-color: var(--accent);
+}
+@media (min-width: 900px) {
+	:root {
+		--tabbar-h: 0rem;
+	}
+}
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}

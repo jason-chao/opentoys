@@ -1,0 +1,19 @@
+node_modules/
+dist/
+build/
+.svelte-kit/
+.env
+.env.*
+!.env.example
+coverage/
+test-results/
+playwright-report/
+*.log
+.DS_Store
+*.tsbuildinfo
+vite.config.ts.timestamp-*
+
+# Paraglide (generated)
+apps/web/src/lib/paraglide/
+apps/web/project.inlang/cache/
+apps/web/project.inlang/.gitignore

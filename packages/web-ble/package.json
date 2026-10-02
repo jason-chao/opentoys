@@ -1,0 +1,17 @@
+{
+	"name": "@opentoys/web-ble",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"description": "Web Bluetooth transport",
+	"license": "PolyForm-Noncommercial-1.0.0",
+	"exports": {
+		".": "./src/index.ts"
+	},
+	"scripts": {
+		"check": "tsc --noEmit"
+	},
+	"devDependencies": {
+		"@types/web-bluetooth": "^0.0.21"
+	}
+}

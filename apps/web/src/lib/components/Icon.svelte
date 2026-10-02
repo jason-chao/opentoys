@@ -1,0 +1,82 @@
+<script lang="ts">
+	// A few line icons, drawn here (no icon font, nothing fetched). Always decorative: the text says what it is.
+	type Name =
+		| 'patterns'
+		| 'manual'
+		| 'saved'
+		| 'settings'
+		| 'stop'
+		| 'play'
+		| 'back'
+		| 'lock'
+		| 'bolt'
+		| 'palette'
+		| 'star'
+		| 'globe'
+		| 'close'
+		| 'about'
+		| 'chevron';
+	/** `filled` is for the star: a favourite. */
+	let { name, size = 22, filled = false }: { name: Name; size?: number; filled?: boolean } = $props();
+</script>
+
+<svg
+	width={size}
+	height={size}
+	viewBox="0 0 24 24"
+	fill="none"
+	stroke="currentColor"
+	stroke-width="1.8"
+	stroke-linecap="round"
+	stroke-linejoin="round"
+	aria-hidden="true"
+>
+	{#if name === 'patterns'}
+		<path d="M2 12h3l2.5-6 4 12 3-9 2 3H22" />
+	{:else if name === 'manual'}
+		<circle cx="12" cy="12" r="3" />
+		<circle cx="12" cy="12" r="7.5" opacity="0.55" />
+		<path d="M12 1.5v2M12 20.5v2" />
+	{:else if name === 'saved'}
+		<path d="M6 3h12v18l-6-4-6 4z" />
+	{:else if name === 'settings'}
+		<path d="M4 7h10M18 7h2M4 17h4M12 17h8" />
+		<circle cx="16" cy="7" r="2" />
+		<circle cx="10" cy="17" r="2" />
+	{:else if name === 'stop'}
+		<rect x="6" y="6" width="12" height="12" rx="2.5" fill="currentColor" stroke="none" />
+	{:else if name === 'play'}
+		<path d="M8 5.5v13l10.5-6.5z" fill="currentColor" stroke="none" />
+	{:else if name === 'back'}
+		<path d="M15 5l-7 7 7 7" />
+	{:else if name === 'lock'}
+		<rect x="5" y="11" width="14" height="9" rx="2" />
+		<path d="M8 11V8a4 4 0 0 1 8 0v3" />
+	{:else if name === 'bolt'}
+		<path d="M13 2L5 13h6l-1 9 8-11h-6z" />
+	{:else if name === 'palette'}
+		<path
+			d="M12 3a9 9 0 1 0 0 18c1.4 0 2.2-1 2.2-2.1 0-.6-.3-1.1-.6-1.5-.3-.4-.5-.8-.5-1.3 0-1 .8-1.8 1.9-1.8H17a4 4 0 0 0 4-4C21 6.2 17 3 12 3z"
+		/>
+		<circle cx="7.5" cy="11.5" r="1" fill="currentColor" stroke="none" />
+		<circle cx="10" cy="7.5" r="1" fill="currentColor" stroke="none" />
+		<circle cx="14.5" cy="7" r="1" fill="currentColor" stroke="none" />
+		<circle cx="17.5" cy="10" r="1" fill="currentColor" stroke="none" />
+	{:else if name === 'star'}
+		<path
+			d="M12 3.2l2.7 5.6 6.1.8-4.5 4.2 1.1 6-5.4-3-5.4 3 1.1-6L3.2 9.6l6.1-.8z"
+			fill={filled ? 'currentColor' : 'none'}
+		/>
+	{:else if name === 'globe'}
+		<circle cx="12" cy="12" r="9" />
+		<path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" />
+	{:else if name === 'close'}
+		<path d="M6 6l12 12M18 6L6 18" />
+	{:else if name === 'about'}
+		<circle cx="12" cy="12" r="9" />
+		<path d="M12 11v6" />
+		<circle cx="12" cy="7.6" r="0.6" fill="currentColor" />
+	{:else if name === 'chevron'}
+		<path d="M9 5l7 7-7 7" />
+	{/if}
+</svg>

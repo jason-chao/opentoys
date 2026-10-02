@@ -1,0 +1,157 @@
+/* Settings and About: one layout, on one spacing scale (base.css: --space-section between sections,
+   --space-card between cards, --space-line between the lines in a card). Headings stand clearly above body
+   text, and a card holds one idea. Global, under .settings, and at low specificity so a component's own
+   styles still win. */
+:where(.settings) > h1 {
+	margin: 0.4rem 0 var(--space-card);
+}
+:where(.settings) > .lede {
+	margin: 0 0 var(--space-section);
+}
+:where(.settings) section {
+	margin-top: var(--space-card);
+	scroll-margin-top: 8rem;
+}
+:where(.settings) section > :first-child,
+:where(.settings) .card > :first-child {
+	margin-top: 0;
+}
+:where(.settings) section > :last-child,
+:where(.settings) .card > :last-child {
+	margin-bottom: 0;
+}
+:where(.settings) h2 {
+	margin: 0 0 var(--space-line);
+	font-size: 1.25rem;
+}
+:where(.settings) h3 {
+	margin: var(--space-card) 0 var(--space-line);
+	font-size: 1.05rem;
+}
+:where(.settings) p {
+	margin: var(--space-line) 0;
+}
+:where(.settings) .row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-line);
+	margin: var(--space-card) 0 0;
+}
+:where(.settings) .field {
+	display: grid;
+	gap: 0.1rem;
+	margin-top: var(--space-card);
+}
+:where(.settings) .top {
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+	font-weight: 650;
+}
+:where(.settings) .out {
+	color: var(--accent);
+	font-variant-numeric: tabular-nums;
+}
+:where(.settings) select {
+	min-height: 44px;
+	padding: 0 0.7rem;
+	border: 1px solid var(--line);
+	border-radius: 0.8rem;
+	background: var(--raised);
+}
+:where(.settings) .above {
+	margin-top: var(--space-card);
+	padding-top: var(--space-card);
+	border-top: 1px solid var(--line);
+}
+:where(.settings) .confirm {
+	display: grid;
+	gap: var(--space-line);
+}
+:where(.settings) .confirm p {
+	margin: 0;
+}
+:where(.settings) .choices {
+	display: grid;
+	gap: var(--space-line);
+}
+:where(.settings) .choice {
+	display: flex;
+	gap: 0.7rem;
+	align-items: flex-start;
+	min-height: 44px;
+	padding: 0.4rem 0;
+	cursor: pointer;
+}
+:where(.settings) .choice input {
+	flex: none;
+	width: 1.35rem;
+	height: 1.35rem;
+	margin-top: 0.15rem;
+	accent-color: var(--accent);
+}
+:where(.settings) .choice > span {
+	display: grid;
+	gap: 0.1rem;
+}
+:where(.settings) .file:focus-within {
+	outline: 2px solid var(--focus);
+	outline-offset: 2px;
+}
+:where(.settings) .danger-card {
+	margin-top: var(--space-card);
+	border-color: var(--danger);
+}
+:where(.settings) .ok {
+	font-weight: 600;
+}
+:where(.settings) .warn {
+	color: var(--danger);
+	font-weight: 600;
+}
+:where(.settings) .more-link {
+	margin: var(--space-section) 0 0;
+}
+:where(.settings) .more-link a {
+	display: inline-flex;
+	align-items: center;
+	min-height: 44px;
+	font-weight: 650;
+}
+/* The hub: one row per place to go, with its state in a few words. */
+:where(.settings) .hub {
+	display: grid;
+	gap: var(--space-card);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+:where(.settings) .hub a {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	align-items: center;
+	gap: 0 0.8rem;
+	min-height: 64px;
+	padding: 0.7rem var(--space-pad);
+	border: 1px solid var(--line);
+	border-radius: var(--radius);
+	background: var(--surface);
+	text-decoration: none;
+}
+:where(.settings) .hub a:hover {
+	background: var(--surface-2);
+}
+:where(.settings) .hub .title {
+	font-size: 1.05rem;
+	font-weight: 700;
+}
+:where(.settings) .hub .state {
+	grid-column: 1;
+	font-size: 0.9rem;
+	color: var(--soft);
+}
+:where(.settings) .hub svg {
+	grid-column: 2;
+	grid-row: 1 / span 2;
+	color: var(--faint);
+}

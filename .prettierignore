@@ -1,0 +1,16 @@
+package-lock.json
+node_modules/
+build/
+.svelte-kit/
+apps/web/src/lib/paraglide/
+apps/web/project.inlang/
+apps/web/static/
+test-results/
+playwright-report/
+
+# Prose is wrapped by hand
+*.md
+
+# Conformance fixtures and the preset library: kept byte for byte
+packages/core/test/fixtures/
+packages/core/src/presets/library/

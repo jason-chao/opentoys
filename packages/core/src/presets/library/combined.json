@@ -1,0 +1,181 @@
+{
+	"_note": "Vibration + e-stim presets (our own designs). E-stim envelopes are slow and ramped: onsets ease in, rises stay <= 0.1 of the range per tick (<= 0.05 above half), falls may be instant. Vibration masks e-stim, so e-stim is never left to jump up the moment vibration stops.",
+	"presets": [
+		{
+			"id": "tingle-bed",
+			"label": "Tingle bed",
+			"category": "combined",
+			"description": "A steady tingle under a smooth 4 s vibration wave.",
+			"tags": ["split", "wave"],
+			"vib": [["sine", 0.3, 1.0, 4000, 1]],
+			"estim": [["hold", 0.4, 4000]]
+		},
+		{
+			"id": "breath-together",
+			"label": "Breath together",
+			"category": "combined",
+			"description": "Both breathe together every 10 s; the tingle follows a second behind.",
+			"tags": ["wave", "10 s"],
+			"vib": [["sine", 0.15, 1.0, 10000, 1, 0.4]],
+			"estim": { "follow": "vib", "scale": 0.8, "lag_ms": 1000, "smooth_ms": 500 }
+		},
+		{
+			"id": "counter-breath",
+			"label": "Counter-breath",
+			"category": "combined",
+			"description": "Vibration breathes in while the tingle breathes out, and the other way round.",
+			"tags": ["alternate", "10 s"],
+			"vib": [["sine", 0.15, 1.0, 10000, 1, 0.4]],
+			"estim": { "follow": "vib", "invert": true, "scale": 0.8, "smooth_ms": 2000 }
+		},
+		{
+			"id": "heart-accent",
+			"label": "Heart accent",
+			"category": "combined",
+			"description": "A heartbeat, with a soft tingle swelling on every fourth beat.",
+			"tags": ["rhythm", "accent"],
+			"vib": [
+				[
+					"repeat",
+					4,
+					[
+						["hold", 1.0, 150],
+						["rest", 100],
+						["hold", 0.7, 100],
+						["rest", 500]
+					]
+				]
+			],
+			"estim": [
+				["rest", 2400],
+				["ramp", 0.0, 0.6, 600, "lin"],
+				["ramp", 0.6, 0.0, 400, "ease"]
+			]
+		},
+		{
+			"id": "split-pulse",
+			"label": "Split: pulse over tingle",
+			"category": "combined",
+			"description": "A steady tingle; vibration pulses once a second on top.",
+			"tags": ["split", "pulse"],
+			"vib": [["pulse", 1.0, 500, 500, 1]],
+			"estim": [["hold", 0.5, 1000]]
+		},
+		{
+			"id": "split-swell",
+			"label": "Split: swell over hum",
+			"category": "combined",
+			"description": "A low steady hum; the tingle swells up over 6 s and eases back.",
+			"tags": ["split", "wave"],
+			"vib": [["hold", 0.35, 9000]],
+			"estim": [
+				["ramp", 0.1, 0.8, 6000, "ease"],
+				["ramp", 0.8, 0.1, 3000, "ease"]
+			]
+		},
+		{
+			"id": "climb-together",
+			"label": "Climb together",
+			"category": "combined",
+			"description": "Both step up a staircase; the tingle follows one step behind.",
+			"tags": ["steps", "50 s"],
+			"vib": [
+				["steps", 0.33, 1.25, 8000, 6, 300],
+				["rest", 2000]
+			],
+			"estim": [
+				["rest", 8000],
+				["steps", 0.33, 1.25, 8000, 5, 600],
+				["rest", 2000]
+			]
+		},
+		{
+			"id": "toggle",
+			"label": "Toggle",
+			"category": "combined",
+			"description": "Eight seconds of vibration, crossfade, eight seconds of tingle, crossfade back.",
+			"tags": ["alternate", "17.5 s"],
+			"vib": [
+				["hold", 1.0, 8000],
+				["ramp", 1.0, 0.0, 1500],
+				["rest", 6500],
+				["ramp", 0.0, 1.0, 1500]
+			],
+			"estim": [
+				["rest", 8000],
+				["ramp", 0.0, 0.7, 1500],
+				["hold", 0.7, 6500],
+				["ramp", 0.7, 0.0, 1500]
+			]
+		},
+		{
+			"id": "stroke-tingle",
+			"label": "Stroke + tingle",
+			"category": "combined",
+			"description": "Strokes at about 1.4 per second, with a tingle that rides along softly.",
+			"tags": ["rhythm", "follow"],
+			"vib": [["sine", 0.2, 1.0, 700, 1]],
+			"estim": { "follow": "vib", "scale": 0.5, "smooth_ms": 300 }
+		},
+		{
+			"id": "tide-pair",
+			"label": "Tide pair",
+			"category": "combined",
+			"description": "The tingle rises with each surge of the tide and drops away as it ebbs.",
+			"tags": ["wave", "11 s"],
+			"vib": [
+				["ramp", 0.2, 1.0, 3000, "ease"],
+				["ramp", 1.0, 0.6, 1000, "ease"],
+				["ramp", 0.6, 1.0, 2000, "ease"],
+				["ramp", 1.0, 0.2, 3000, "ease"],
+				["rest", 2000]
+			],
+			"estim": [
+				["ramp", 0.0, 0.6, 3000, "ease"],
+				["rest", 1000],
+				["ramp", 0.0, 0.5, 2000, "ease"],
+				["rest", 5000]
+			]
+		},
+		{
+			"id": "edge-pair",
+			"label": "Edge pair",
+			"category": "combined",
+			"description": "Both build for 30 s, the tingle peaks while the vibration hovers, then 15 s of complete stillness.",
+			"tags": ["edging", "51 s"],
+			"vib": [
+				["ramp", 0.2, 1.0, 30000, "ease"],
+				["sine", 0.85, 1.0, 2000, 3],
+				["rest", 15000]
+			],
+			"estim": [
+				["ramp", 0.0, 0.7, 30000, "ease"],
+				["ramp", 0.7, 0.8, 1000],
+				["hold", 0.8, 5000],
+				["rest", 15000]
+			]
+		},
+		{
+			"id": "finale",
+			"label": "Finale",
+			"category": "combined",
+			"description": "A three-minute arc: a slow start, quickening pulses, a full peak, then a long cool-down.",
+			"tags": ["escalation", "3 min"],
+			"vib": [
+				["ramp", 0.2, 0.6, 60000, "ease"],
+				["pulse", 0.85, 400, 400, 75, 0.5],
+				["hold", 1.0, 30000],
+				["ramp", 1.0, 0.1, 30000, "ease"],
+				["rest", 1000]
+			],
+			"estim": [
+				["rest", 20000],
+				["ramp", 0.0, 0.4, 40000, "ease"],
+				["ramp", 0.4, 0.6, 60000],
+				["ramp", 0.6, 0.8, 30000, "ease"],
+				["ramp", 0.8, 0.0, 30000, "ease"],
+				["rest", 1000]
+			]
+		}
+	]
+}
